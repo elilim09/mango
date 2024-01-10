@@ -92,3 +92,26 @@ body {
       <img src="https://i.ibb.co/RySZrrp/2x.png" style=" width: 37%; margin-top: 70px; margin-left: 5%;">
       <img src="https://i.ibb.co/McywqrV/2x.png" style=" float: right; width: 35%; margin-top: 70px; margin-right: 5%;">
       <img src="https://i.ibb.co/py7pBwQ/2x.png" style=" width: 33%; margin-top: 70px; margin-left: 5%;">
+	
+
+      <script>
+        // 페이지가 로드되면 실행될 함수
+        window.onload = function() {
+          // SweetAlert 커스텀 모달 창 열기
+          swal({
+            button: "시작하기",
+            closeOnClickOutside: false,
+            content: {
+              element: "img",
+              attributes: {
+                src: "https://i.ibb.co/r6JqmwF/3x.png",
+                width: 430
+              },
+            },
+          });
+        };
+      </script>
+
+
+    </body>
+    </html>
