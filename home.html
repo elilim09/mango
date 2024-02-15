@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet : mango</title>
@@ -68,6 +69,21 @@ body {
        }
 
 
+       /*알림 스타일*/
+       #notification {
+      display: none;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    #notification img {
+      width: 50px; /* 이미지의 너비를 조정하세요 */
+      height: auto; /* 이미지의 높이를 자동으로 조정합니다 */
+    }
+
+
     html{cursor: url(https://i.ibb.co/YN5HWpB/cusor.png) 11 11, url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto}
     a, a:link {cursor:  url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
     a:hover, a:focus {cursor:  url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
@@ -128,6 +144,41 @@ body {
 		<a href="#" onclick="swal('mango .Beta', '지금은 1차 베타테스트 중이에요.')" style="color: white;">📢 mango : .Beta Open!</a>
 	</center>
      </div>
+    <div id="notification" onclick="redirectToLink()">
+        <img src="red_notification.png" alt="알림 베타">
+      </div>
+
+
+
+
+
+    <script>
+        function showNotification() {
+          document.getElementById('notification').style.display = 'block';
+        }
+      
+        function hideNotification() {
+          document.getElementById('notification').style.display = 'none';
+        }
+      
+        function redirectToLink() {
+          // 여기에 특정 링크로 이동하는 코드를 추가합니다.
+          window.location.href = 'https://your-special-link.com';
+      
+          // 이동 후 쿠키를 설정하여 다시는 알림이 뜨지 않도록 합니다.
+          document.cookie = 'notificationShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+      
+          // 이동 후 알림을 숨김
+          hideNotification();
+        }
+      
+        // 페이지 로드 시 쿠키를 확인하고 알림을 보여주는 함수 호출
+        window.onload = function () {
+          if (document.cookie.indexOf('notificationShown=') === -1) {
+            showNotification();
+          }
+        };
+      </script>
 
 
 
