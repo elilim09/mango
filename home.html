@@ -166,7 +166,7 @@ body {
           window.location.href = 'https://your-special-link.com';
       
           // 이동 후 쿠키를 설정하여 다시는 알림이 뜨지 않도록 합니다.
-          document.cookie = 'notificationShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+          document.cookie = 'notificationShownt=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
       
           // 이동 후 알림을 숨김
           hideNotification();
@@ -174,14 +174,10 @@ body {
       
         // 페이지 로드 시 쿠키를 확인하고 알림을 보여주는 함수 호출
         window.onload = function () {
-          if (document.cookie.indexOf('notificationShown=') === -1) {
+          if (document.cookie.indexOf('notificationShownt=') === -1) {
             showNotification();
           }
         };
-
-	    function resetCookies() {
-  document.cookie = "notificationShown=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-}
 
       </script>
 
