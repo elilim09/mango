@@ -145,7 +145,7 @@ body {
 	</center>
      </div>
     <div id="notification" onclick="redirectToLink()">
-        <img src="https://i.ibb.co/KsHjYPw/4x.png" alt="알림 테스">
+        <img src="https://i.ibb.co/6stR3p1/2x.png" alt="알림_ 망고에서 공부하기 영상 바로가기">
       </div>
 
 
@@ -163,10 +163,10 @@ body {
       
         function redirectToLink() {
           // 여기에 특정 링크로 이동하는 코드를 추가합니다.
-          window.location.href = 'https://your-special-link.com';
+          window.location.href = 'https://youtu.be/Ag2BLtAPe2A';
       
           // 이동 후 쿠키를 설정하여 다시는 알림이 뜨지 않도록 합니다.
-          document.cookie = 'notificationShownt=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+          document.cookie = 'notificationShownal=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
       
           // 이동 후 알림을 숨김
           hideNotification();
@@ -174,7 +174,7 @@ body {
       
         // 페이지 로드 시 쿠키를 확인하고 알림을 보여주는 함수 호출
         window.onload = function () {
-          if (document.cookie.indexOf('notificationShownt=') === -1) {
+          if (document.cookie.indexOf('notificationShownal=') === -1) {
             showNotification();
           }
         };
