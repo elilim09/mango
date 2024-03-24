@@ -78,6 +78,12 @@ body {
             <a href="home.html"><img src="https://i.ibb.co/yQSNXV6/2x.png" height="80px;" style="margin-top:20px;"></a>
             <img src="https://i.ibb.co/NYW77JH/2x.png" height="80px;" style="margin-top:20px; margin-left:5px;">
         </div>
+
+    </center>
+
+	<img src="https://i.ibb.co/Zm2BPMG/mango-X-2x.png" style="float:right;" height="80px" id="passwordButton">
+	
+    <center>
         
 
 
@@ -144,9 +150,31 @@ body {
 
 
 </center>
+</center>
 
-
-    </center>
+            <script>
+                document.getElementById('passwordButton').addEventListener('click', function () {
+                    Swal.fire({
+                        title: '열심히 만들고 있어요!',
+                        input: 'password',
+                        inputAttributes: {
+                            autocapitalize: 'off'
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: '확인',
+                        showLoaderOnConfirm: true,
+                        preConfirm: (password) => {
+                            // 여기에서 입력된 비밀번호를 확인하는 로직을 추가합니다.
+                            if (password === '재오화이팅') {
+                                // 올바른 비밀번호가 입력된 경우 특정 페이지로 이동하거나 원하는 작업을 수행합니다.
+                                window.location.href = 'studyX.html'; // 예: 다른 페이지로 이동
+                            } else {
+                                Swal.showValidationMessage('개발자 전용 비밀번호를 입력하세요');
+                            }
+                        }
+                    });
+                });
+                </script>
 
 
 
