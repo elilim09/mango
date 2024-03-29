@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study : mangoX</title>
+    <link rel="icon" href="https://i.ibb.co/FgydS5v/mango-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <style>
+        #sub-menu:hover
+        {
+            transition: transform 0.1s linear;
+            transform: scale(1.2,1.2);
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+  right: 0;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'comfortaa', Jua;
+        font-weight: 10000;
+        color: white;
+        background-color: #1a1a1a; }
+
+        ul.navbar {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }
+	    
+	    
+       a {
+         text-decoration: none;
+       }
+          
+       div {
+         line-height: 1.5;
+       }
+          
+       .small-div {
+         line-height: 0.1;
+       }
+
+
+    html{cursor: url(https://i.ibb.co/YN5HWpB/cusor.png) 11 11, url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto}
+    a, a:link {cursor:  url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
+    a:hover, a:focus {cursor:  url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
+    a:active, a:hover {cursor: url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
+
+    a:hover, a:focus {filter: brightness(0.7);}
+        
+    .btn_order_status {position:fixed; bottom:0;}
+    </style>
+</head>
+<body>
+    <center>
+
+        <div>
+            <a href="#" onclick="swal('mango+ : 환영해요!', '이곳의 자료는 오직 멤버십 가입자들만을 위한 것이에요.')"><img src="https://i.ibb.co/5s5WmQk/mango-2x.png" height="80px;" style="margin-top:20px;"></a>
+            <img src="https://i.ibb.co/NYW77JH/2x.png" height="80px;" style="margin-top:20px; margin-left:5px;">
+        </div>
+        
+
+
+        <div style="margin-top:80px;">
+
+
+        <div style="padding:10px; word-break:keep-all; width:110px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-right: 5px; float:left;">
+            <p>AI 예상문제</p></div></a>
+                     
+          
+    <div id="download-link" style="padding:10px; word-break:keep-all; width:500px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 30px; float:left;">
+
+      <p>사회</p>
+      <a href="AI 예상문제/mango_ 중학교3학년 AI 개념문제_ 사회1,2단원.pdf" style="color:white;" download>[중간고사] 사회 1,2단원 개념</a><br>
+       <p></p><br>  
+     
+      <p>과학</p>
+      <a href="AI 예상문제/mango_ 중학교3학년 AI 개념문제(과학).pdf" style="color:white;" download>[전범위] 과학 개념문제</a><br>
+      <a href="AI 예상문제/mango_ 중학교3학년 AI 심화문제(과학).pdf" style="color:white;" download>[전범위] 과학 심화문제</a><br>
+       <p></p><br>
+
+    <br></div>
+          
+          
+            <div style="padding:10px; word-break:keep-all; width:110px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-left: 5px; float:right;">
+              <p>기출 정답</p></div></a>
+                       
+               <a href="#">
+                <div style="padding:10px; word-break:keep-all; width:500px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 30px; float:right;" id="passwordButton">
+              <p>▶ 👑 mangoX 페이지로 이동하기</p>
+                          
+              <p></p></div></a>
+              </div>
+<center>
+</center>
+</center>
+
+<script>
+  document.getElementById('passwordButton').addEventListener('click', function () {
+      Swal.fire({
+          title: 'mangoX 전용 비번 입력',
+          input: 'password',
+          inputAttributes: {
+              autocapitalize: 'off'
+          },
+          showCancelButton: true,
+          confirmButtonText: '확인',
+          showLoaderOnConfirm: true,
+          preConfirm: (password) => {
+              // 여기에서 입력된 비밀번호를 확인하는 로직을 추가합니다.
+              if (password === '1mangoX') {
+                  // 올바른 비밀번호가 입력된 경우 특정 페이지로 이동하거나 원하는 작업을 수행합니다.
+                  window.location.href = 'studyX.html'; // 예: 다른 페이지로 이동
+              } else {
+                  Swal.showValidationMessage('옳지 않은 비밀번호예요 :(');
+              }
+          }
+      });
+  });
+  </script>
+
+
+
+</body>
+</html>
