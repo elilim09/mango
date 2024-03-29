@@ -130,14 +130,18 @@ body {
                 <div style="padding:10px; word-break:keep-all; width:500px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 20px; float:right;" id="passwordButton">
               <p>▶ 시험 기간에 업로드 예정이에요.</p>
               <p></p></div></a>
-		
-		<div style="padding:10px; word-break:keep-all; width:620px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 20px; float:right;" id="passwordButton">
-              <p>▶ testing; div</p>
-              <p></p></div>
 
-		<div style="padding:10px; word-break:keep-all; width:620px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 20px; float:right;" id="passwordButton">
-              <p>▶ testing; div2</p>
+		<a href="study+.html">
+		<div style="padding:10px; word-break:keep-all; width:630px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 20px; float:right;" id="passwordButton">
+              <img src="https://i.ibb.co/d2gWyt8/4x.png" width="200px">
               <p></p></div>
+		</a>
+
+		<a href="studyX.html">
+		<div style="padding:10px; word-break:keep-all; width:630px; background-color:#606060; color:#FFFFFF; font-size:1.2em; border-radius: 20px; margin-bottom: 20px; float:right;" id="passwordButtonX">
+              <img src="https://i.ibb.co/r5WP3Q2/mango-X-4x.png" width="200px">
+              <p></p></div>
+		</a>
 	</div>
 <center>
               <div style="position: fixed; bottom: 50px; left: 15%; width: 70%; height: 25px; background-color: #5C5C5C; border-radius: 15px 15px 15px 15px; opacity: 0.9;">
@@ -156,7 +160,7 @@ body {
             <script>
                 document.getElementById('passwordButton').addEventListener('click', function () {
                     Swal.fire({
-                        title: '추후 오픈됩니다✏️',
+                        title: 'mango+ 바로가기',
                         input: 'password',
                         inputAttributes: {
                             autocapitalize: 'off'
@@ -166,11 +170,34 @@ body {
                         showLoaderOnConfirm: true,
                         preConfirm: (password) => {
                             // 여기에서 입력된 비밀번호를 확인하는 로직을 추가합니다.
-                            if (password === '재오화이팅') {
+                            if (password === '494852','1mangoX') {
+                                // 올바른 비밀번호가 입력된 경우 특정 페이지로 이동하거나 원하는 작업을 수행합니다.
+                                window.location.href = 'study+.html'; // 예: 다른 페이지로 이동
+                            } else {
+                                Swal.showValidationMessage('비밀번호가 틀렸네요 :(');
+                            }
+                        }
+                    });
+                });
+                </script>
+            <script>
+                document.getElementById('passwordButtonX').addEventListener('click', function () {
+                    Swal.fire({
+                        title: 'mangoX 바로가기',
+                        input: 'password',
+                        inputAttributes: {
+                            autocapitalize: 'off'
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: '확인',
+                        showLoaderOnConfirm: true,
+                        preConfirm: (password) => {
+                            // 여기에서 입력된 비밀번호를 확인하는 로직을 추가합니다.
+                            if (password === '1mangoX') {
                                 // 올바른 비밀번호가 입력된 경우 특정 페이지로 이동하거나 원하는 작업을 수행합니다.
                                 window.location.href = 'studyX.html'; // 예: 다른 페이지로 이동
                             } else {
-                                Swal.showValidationMessage('개발자 전용 비밀번호를 입력하세요');
+                                Swal.showValidationMessage('옳지 않은 비밀번호예요 :(');
                             }
                         }
                     });
