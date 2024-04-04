@@ -85,10 +85,9 @@ body {
 
 
 <!---이미지 배경 그림자 효과--->
-.shadow {
-    box-shadow: 0px 0px 10px 5px #ffffff; /* X축 Y축 흐림 반경 확산 반경 색상 */
-    border: 1px solid #ccc; /* 이미지 주변에 경계선을 추가합니다 (선택 사항) */
-    padding: 10px; /* 이미지 주변에 여백을 추가합니다 (선택 사항) */
+.shadow:hover {
+    box-shadow: 0px 0px 10px 5px #ffffff; /* 마우스를 올렸을 때 나타날 하얀색 그림자 */
+    transition: box-shadow 0.3s ease-in-out; /* 그림자 효과가 부드럽게 전환되도록 설정 */
 }
 	    
 
