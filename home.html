@@ -134,7 +134,7 @@ body {
         <a href="Introduction.html"><img src="https://i.ibb.co/2jxtcp0/1-5x.png" style="width: 23%; margin-top: calc(9.50% + 1%); border-radius: 30px; margin-left: 1%;"></a>
 	<a href="https://www.instagram.com/mango._2024/?igsh=ejQxZTQ4NWZzMjRm" target="_blank"><img src="https://i.ibb.co/3T3P4jQ/1-5x.png" style="width: 23%; margin-top: calc(9.50% + 1%); margin-left: 1%;"></a>
 	<a href="https://forms.gle/jt6CaB3gcDsr9fDt8" target="_blank"><img src="https://i.ibb.co/zhQnPr0/mango-X-1x.png" style="width: 23%; margin-top: calc(9.50% + 1%); margin-left: 1%;"></a>
-	<a href="#" target="_blank"><img src="https://i.ibb.co/XLTJH5K/3-1-1-1x.png" style="width: 23%; margin-top: calc(9.50% + 1%); border-radius: 30px; margin-left: 1%;"></a>
+	<a href="#" target="_blank"><img src="https://i.ibb.co/XLTJH5K/3-1-1-1x.png" style="width: 23%; margin-top: calc(9.50% + 1%); border-radius: 30px; margin-left: 1%;" id="passwordButtonX"></a>
 
     </center>
 
@@ -202,6 +202,31 @@ body {
   });
 </script>
 <!---채널톡 스크립트 .end--->
+
+
+            <script>
+                document.getElementById('passwordButtonX').addEventListener('click', function () {
+                    Swal.fire({
+                        title: 'mangoX 바로가기',
+                        input: 'password',
+                        inputAttributes: {
+                            autocapitalize: 'off'
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: '확인',
+                        showLoaderOnConfirm: true,
+                        preConfirm: (password) => {
+                            // 여기에서 입력된 비밀번호를 확인하는 로직을 추가합니다.
+                            if (password === '1mangoX') {
+                                // 올바른 비밀번호가 입력된 경우 특정 페이지로 이동하거나 원하는 작업을 수행합니다.
+                                window.location.href = 'studyX.html'; // 예: 다른 페이지로 이동
+                            } else {
+                                Swal.showValidationMessage('옳지 않은 비밀번호예요 :(');
+                            }
+                        }
+                    });
+                });
+                </script>
 
 
 
