@@ -132,39 +132,7 @@ body {
 
 
 
-<center>
-    <div id="notification" onclick="redirectToLink()">
-        <img src="https://i.ibb.co/G0bCHzP/mango-X-1x.png" alt="최초 가림창_ 사용자 확인" width="200px">
-    </div>
-</center>
-<script>
-    function showNotification() {
-      document.getElementById('notification').style.display = 'block';
-    }
 
-    function hideNotification() {
-      document.getElementById('notification').style.display = 'none';
-    }
-
-    function redirectToLink() {
-      // 여기에 특정 링크로 이동하는 코드를 추가합니다.
-      window.location.href = 'https://forms.gle/TdijpvEPNshW48Wr7';
-
-      // 이동 후 쿠키를 설정하여 다시는 알림이 뜨지 않도록 합니다.
-      document.cookie = 'notificationShown=true; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/';
-
-      // 이동 후 알림을 숨김
-      hideNotification();
-    }
-
-    // 페이지 로드 시 쿠키를 확인하고 알림을 보여주는 함수 호출
-    window.onload = function () {
-      if (document.cookie.indexOf('notificationShown=') === -1) {
-        showNotification();
-      }
-    };
-
-</script>
 
 
 </body>
