@@ -27,7 +27,7 @@
 /* Reset body margin */
 body {
     margin: 0;
-    background-color: #1a1a1a; /* 전체 배경 색상 설정 */
+    background-color: #ffffff; /* 전체 배경 색상 설정 */
     overflow-y: auto; /* 세로 스크롤 활성화 */
     font-family: 'Bebas Neue', cursive;
     font-family: 'comfortaa', Jua;
@@ -77,7 +77,7 @@ body {
 .main-content {
     width: calc(100% - 40px); /* 화면 전체 너비에서 양쪽 여백(20px씩)을 뺀 값으로 설정 */
     max-width: 100%; /* 최대 너비를 화면 전체 너비로 설정 */
-    margin: 0 auto; /* 좌우 중앙 정렬 */
+    margin: 5px auto; /* 좌우 중앙 정렬 및 상단에 약간의 여백 추가 */
     height: 650px; /* 높이 800px로 변경 */
     display: flex; /* 플렉스 박스 설정 */
     flex-direction: column; /* 세로 방향으로 나열 */
@@ -106,6 +106,7 @@ body {
     z-index: 999; /* 상단바 뒤에 나타나도록 설정 */
     position: relative; /* 상대 위치 설정 */
     margin-top: 0px; /* 상단바와 겹치지 않도록 여백 설정 */
+    margin: 5px auto; /* 좌우 중앙 정렬 및 상단에 약간의 여백 추가 */
     padding: 0; /* 좌우 여백을 없앰 */
 }
 
@@ -137,6 +138,31 @@ body {
     font-family: 'Comfortaa', Jua;
     color: #ffffff; /* 텍스트 색상 */
     margin-bottom: 5px; /* 아이콘과 텍스트 사이 간격 설정 */
+}
+
+.sub-content {
+    width: calc(50% - 40px); /* 화면 전체 너비에서 양쪽 여백(20px씩)을 뺀 값으로 설정 */
+    max-width: 46%; /* 최대 너비를 화면 전체 너비로 설정 */
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    height: 650px; /* 높이 800px로 변경 */
+    display: flex; /* 플렉스 박스 설정 */
+    flex-direction: column; /* 세로 방향으로 나열 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    background-color: #1a1a1a; /* 배경색 설정 */
+    z-index: 999; /* 상단바 뒤에 나타나도록 설정 */
+    position: relative; /* 상대 위치 설정 */
+    padding: 0 20px; /* 좌우 여백을 조금 줄임 */
+}
+
+/* 미디어 쿼리를 사용하여 화면 크기에 따라 스타일 변경 */
+@media screen and (max-width: 767px) {
+    .sub-content {
+        width: calc(100% - 40px); /* 화면 전체 너비에서 양쪽 여백(20px씩)을 뺀 값으로 설정 */
+        max-width: 100%; /* 최대 너비를 화면 전체 너비로 설정 */
+        margin: 0 auto; /* 좌우 중앙 정렬 */
+    }
 }
 
 html{cursor: url(https://i.ibb.co/YN5HWpB/cusor.png) 11 11, url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto}
@@ -180,9 +206,7 @@ a:hover {
 </div></a>
 
 <!-- 세번째 메인 컨텐츠  -->
-<div class="main-content" style="background-color: white;">
-    <img src="https://i.ibb.co/FgydS5v/mango-icon.png" alt="아이콘 이미지" class="icon">
-    <p>Planet : mango</p>
+<div class="main-content-backimg" style="background-color: rgb(233, 233, 233); background-image: url(https://i.ibb.co/zsNjpYk/Ultra-membership-is-coming-1-5x.png); height: 800px;">
 </div>
 
 </body>
