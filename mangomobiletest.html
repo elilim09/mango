@@ -4,24 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planet : mango</title>
-<link rel="icon" href="https://i.ibb.co/1R0LK81/image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="https://i.ibb.co/FgydS5v/mango-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Jua&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<title>웹페이지</title>
 <style>
-/*글꼴 설정*/
+/* 글꼴 설정 */
 @font-face {
     font-family: 'SamsungSharpSansBd'; /* 글꼴 이름 설정 */
     src: url('fonts/SamsungSharpSansBd.ttf') format('truetype'); /* 다운로드된 글꼴 파일 경로 설정 */
-    /* 추가적인 설정 가능 (예: font-weight, font-style 등) */
 }
 
 /* Reset body margin */
@@ -31,6 +25,11 @@ body {
     overflow-y: auto; /* 세로 스크롤 활성화 */
     font-family: 'Bebas Neue', cursive;
     font-family: 'comfortaa', Jua;
+}
+
+p {
+    color: #F5F5F5;
+    margin-top: 5px; /* 위쪽 여백 설정 */
 }
 
 /* 상단바 스타일 */
@@ -110,8 +109,6 @@ body {
     padding: 0; /* 좌우 여백을 없앰 */
 }
 
-
-
 /* 메인 컨텐츠 내부 아이콘 이미지 스타일 */
 .main-content .icon {
     width: 60px; /* 너비 설정 확대 */
@@ -140,11 +137,12 @@ body {
     margin-bottom: 5px; /* 아이콘과 텍스트 사이 간격 설정 */
 }
 
+/* 서브-콘텐츠 스타일 */
 .sub-content {
-    width: calc(50% - 40px); /* 화면 전체 너비에서 양쪽 여백(20px씩)을 뺀 값으로 설정 */
+    width: calc(60% - 34px); /* 화면 약절반 너비에서 여백(17px)을 뺀 값으로 설정 */
     max-width: 46%; /* 최대 너비를 화면 전체 너비로 설정 */
     margin: 0 auto; /* 좌우 중앙 정렬 */
-    height: 650px; /* 높이 800px로 변경 */
+    height: 400px; /* 높이 00px로 설정 */
     display: flex; /* 플렉스 박스 설정 */
     flex-direction: column; /* 세로 방향으로 나열 */
     justify-content: center; /* 수직 가운데 정렬 */
@@ -154,25 +152,74 @@ body {
     z-index: 999; /* 상단바 뒤에 나타나도록 설정 */
     position: relative; /* 상대 위치 설정 */
     padding: 0 20px; /* 좌우 여백을 조금 줄임 */
+    float: left; /* 왼쪽으로 플로팅하여 가로 배열 */
+    margin: 5px; /* 간격 설정 */
+    border-radius: 7px;
+}
+
+/* 서브-콘텐츠를 가운데 정렬하는 부모 컨테이너 */
+.sub-content-wrapper {
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
+    margin-top: 5px; /* 상단 여백 추가 */
 }
 
 /* 미디어 쿼리를 사용하여 화면 크기에 따라 스타일 변경 */
 @media screen and (max-width: 767px) {
     .sub-content {
-        width: calc(100% - 40px); /* 화면 전체 너비에서 양쪽 여백(20px씩)을 뺀 값으로 설정 */
+        width: calc(100% - 20px); /* 화면 전체 너비에서 양쪽 여백(20px씩)을 뺀 값으로 설정 */
         max-width: 100%; /* 최대 너비를 화면 전체 너비로 설정 */
-        margin: 0 auto; /* 좌우 중앙 정렬 */
+        margin: 5px auto; /* 상하 여백을 조금 늘림 */
+        float: none; /* 플로팅 해제하여 세로 배열 */
     }
 }
 
-html{cursor: url(https://i.ibb.co/YN5HWpB/cusor.png) 11 11, url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto}
-    a, a:link {cursor:  url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
-    a:hover, a:focus {cursor:  url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
-    a:active, a:hover {cursor: url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;}
+
+/* 슬라이드 배너 스타일 */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 5px auto; /* 슬라이드 배너 위아래 여백 */
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* 슬라이드 애니메이션 */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+html {
+    cursor: url(https://i.ibb.co/YN5HWpB/cusor.png) 11 11, url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;
+}
+
+a:active,
+a:hover {
+    cursor: url(https://i.ibb.co/HdpxgJ2/cusor-2.png) 16 16, auto;
+}
 
 /* 링크에 마우스를 올렸을 때 효과 */
 a {
-    transition: opacity 0.2s; /* opacity 속성에 대한 변화를 0.5초 동안 부드럽게 전환 */
+    transition: opacity 0.2s; /* opacity 속성에 대한 변화를 0.2초 동안 부드럽게 전환 */
 }
 
 /* 링크에 마우스를 올렸을 때 밝기를 서서히 어둡게 */
@@ -201,13 +248,85 @@ a:hover {
     <p>이제는, 망고를, 모바일에서도.</p><a href="#" text-decoration: none;><img src="https://i.ibb.co/F4LjRrM/2x.png" width="80px"></a>
 </div>
 
-<!-- 두 번째 메인 컨텐츠 --><a href="Introduction.html">
-<div class="main-content-backimg" style="background-color: #333333;">
-</div></a>
+<!-- 두 번째 메인 컨텐츠 -->
+<a href="Introduction.html">
+    <div class="main-content-backimg" style="background-color: #333333;">
+    </div>
+</a>
 
 <!-- 세번째 메인 컨텐츠  -->
 <div class="main-content-backimg" style="background-color: rgb(233, 233, 233); background-image: url(https://i.ibb.co/zsNjpYk/Ultra-membership-is-coming-1-5x.png); height: 800px;">
 </div>
+
+<!-- 서브-콘텐츠 래퍼 -->
+<div class="sub-content-wrapper">
+    <!-- 첫 번째 서브-콘텐츠 -->
+    <div class="sub-content">
+        <img src="https://i.ibb.co/27XJ05j/mango-X-1-5x.png" alt="아이콘 이미지" style="width: 150px;"><br>
+        <p class="Comfortaa" style="font-size: x-large; margin-bottom: 5px;">mangoX : Original</p>
+        <p style="color: #F5F5F5;">Best membership in mango Original</p>
+    </div>
+
+    <!-- 두 번째 서브-콘텐츠 -->
+    <div class="sub-content">
+        <img src="https://i.ibb.co/3p6yRz3/mango-1-5x.png" alt="아이콘 이미지" style="width: 150px;"><br>
+        <p class="Comfortaa" style="font-size: x-large; margin-bottom: 5px;">mango+ : Original</p>
+        <p>Perfect membership for you</p>
+    </div>
+</div>
+
+<!-- 슬라이드 배너 섹션 -->
+<div class="slider">
+    <div class="slides">
+        <div class="slide active"><a href="#"><img src="https://i.ibb.co/QPVMy2S/All-New-mango-2-1x.png" alt="Slide 1"></a></div>
+        <div class="slide"><img src="https://i.ibb.co/2SkpZd2/All-New-mango-1x.png" alt="Slide 2"></div>
+        <div class="slide"><img src="https://i.ibb.co/sF5W1Yk/All-New-mango-Spot-1x.png" alt="Slide 3"></div>
+    </div>
+</div>
+
+<script>
+    let slider = document.querySelector('.slider');
+    let slides = document.querySelector('.slides');
+    let slideCount = document.querySelectorAll('.slide').length;
+    let currentIndex = 0;
+    let isPaused = false;
+
+    // 모바일 화면에서 슬라이더 감추기
+    function hideSliderOnMobile() {
+        if (window.innerWidth <= 768) {
+            slider.style.display = 'none';
+        } else {
+            slider.style.display = 'block';
+        }
+    }
+
+    // 페이지 로드 시와 창 크기 변경 시 hideSliderOnMobile 함수 호출
+    document.addEventListener('DOMContentLoaded', hideSliderOnMobile);
+    window.addEventListener('resize', hideSliderOnMobile);
+
+    // 마우스가 슬라이드 배너 위에 올라갔을 때
+    slider.addEventListener('mouseover', function() {
+        isPaused = true; // 정지 플래그를 true로 설정
+    });
+
+    // 마우스가 슬라이드 배너에서 벗어났을 때
+    slider.addEventListener('mouseout', function() {
+        isPaused = false; // 정지 플래그를 false로 설정
+    });
+
+    function showSlide(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function slide() {
+        if (!isPaused) {
+            currentIndex = (currentIndex + 1) % slideCount;
+            showSlide(currentIndex);
+        }
+    }
+
+    setInterval(slide, 3000); // 3초마다 슬라이드 호출
+</script>
 
 </body>
 </html>
