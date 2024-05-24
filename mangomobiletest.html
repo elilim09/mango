@@ -155,10 +155,12 @@ p {
     margin: 5px; /* 간격 설정 */
     border-radius: 7px;
     transition: transform 0.3s ease; /* 부드럽게 커지는 애니메이션 설정 */
+    cursor: pointer; /* 포인터 커서 추가 */
 }
 
 .sub-content:hover {
     transform: scale(1.01); /* 마우스를 올렸을 때 약간 커지는 효과 */
+    opacity: 0.75; /* 밝기 효과 */
 }
 
 /* 서브-콘텐츠를 가운데 정렬하는 부모 컨테이너 */
@@ -283,9 +285,9 @@ a:hover {
 <!-- 슬라이드 배너 섹션 -->
 <div class="slider">
     <div class="slides">
-        <a href="#" onclick="swal('mango Season2', '05.24 : 1차 베타테스트 시작 :)')"><div class="slide active"><a href="#"><img src="https://i.ibb.co/QPVMy2S/All-New-mango-2-1x.png" alt="Slide 1"></a></div>
-        <a href="#" onclick="swal('It's coming✨', '5월 말, 망고의 새로운 멤버십 라인이 공개돼요.')"><div class="slide active"><img src="https://i.ibb.co/2SkpZd2/All-New-mango-1x.png" alt="Slide 2"></a></div>
-        <a href="#" onclick="swal('5월 27일 (월)', 'mango X Spot의 콜라보를 기대하세요!')"><div class="slide active"><img src="https://i.ibb.co/sF5W1Yk/All-New-mango-Spot-1x.png" alt="Slide 3"></a></div>
+        <div class="slide active" onclick="swal('mango Season2', '05.24 : 1차 베타테스트 시작 :)')"><img src="https://i.ibb.co/QPVMy2S/All-New-mango-2-1x.png" alt="Slide 1"></div>
+        <div class="slide active" onclick="swal('It\'s coming✨', '5월 말, 망고의 새로운 멤버십 라인이 공개돼요.')"><img src="https://i.ibb.co/2SkpZd2/All-New-mango-1x.png" alt="Slide 2"></div>
+        <div class="slide active" onclick="swal('5월 27일 (월)', 'mango X Spot의 콜라보를 기대하세요!')"><img src="https://i.ibb.co/sF5W1Yk/All-New-mango-Spot-1x.png" alt="Slide 3"></div>
     </div>
 </div>
 
