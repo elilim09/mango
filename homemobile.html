@@ -343,6 +343,23 @@ a:hover {
 
     setInterval(slide, 3000); // 3초마다 슬라이드 호출
 </script>
+          <script>
+        // 페이지가 로드되면 실행될 함수
+        window.onload = function() {
+          // SweetAlert 커스텀 모달 창 열기
+          swal({
+            button: "시작하기",
+            closeOnClickOutside: false,
+            content: {
+              element: "img",
+              attributes: {
+                src: "images/거짓말입니다.png",
+                width: 430
+              },
+            },
+          });
+        };
+      </script>
 
 </body>
 </html>
